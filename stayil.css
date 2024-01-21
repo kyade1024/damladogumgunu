@@ -1,0 +1,112 @@
+.card-wrapper {
+  display: inline-block;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body {
+        margin: 0;
+        font-family: "Work Sans", sans-serif;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100vh;
+        margin: 0 auto;
+        text-align: center;
+        visibility: hidden;
+        position: relative;
+        overflow: hidden;
+      }
+      
+.card-wrapper .card {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.card-wrapper .card .front,
+.card-wrapper .card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+.card-wrapper .card .front {
+  z-index: 2;
+}
+.card-wrapper .card .back,
+.card-wrapper.flip-right .card .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card-wrapper:hover .card,
+.card-wrapper.flip-right:hover .card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card-wrapper.flip-left .card .back {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.card-wrapper.flip-left:hover .card {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+.card-wrapper.flip-up .card .back {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+.card-wrapper.flip-up:hover .card {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+.card-wrapper.flip-down .card .back {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+.card-wrapper.flip-down:hover .card {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+.card-wrapper.flip-diagonal-right .card .back {
+  -webkit-transform: rotate3d(1, 1, 0, 180deg);
+          transform: rotate3d(1, 1, 0, 180deg);
+}
+.card-wrapper.flip-diagonal-right:hover .card {
+  -webkit-transform: rotate3d(1, 1, 0, 180deg);
+          transform: rotate3d(1, 1, 0, 180deg);
+}
+.card-wrapper.flip-diagonal-left .card .back {
+  -webkit-transform: rotate3d(1, 1, 0, -180deg);
+          transform: rotate3d(1, 1, 0, -180deg);
+}
+.card-wrapper.flip-diagonal-left:hover .card {
+  -webkit-transform: rotate3d(1, 1, 0, -180deg);
+          transform: rotate3d(1, 1, 0, -180deg);
+}
+.card-wrapper.flip-inverted-diagonal-right .card .back {
+  -webkit-transform: rotate3d(-1, 1, 0, 180deg);
+          transform: rotate3d(-1, 1, 0, 180deg);
+}
+.card-wrapper.flip-inverted-diagonal-right:hover .card {
+  -webkit-transform: rotate3d(-1, 1, 0, 180deg);
+          transform: rotate3d(-1, 1, 0, 180deg);
+}
+.card-wrapper.flip-inverted-diagonal-left .card .back {
+  -webkit-transform: rotate3d(1, -1, 0, 180deg);
+          transform: rotate3d(1, -1, 0, 180deg);
+}
+.card-wrapper.flip-inverted-diagonal-left:hover .card {
+  -webkit-transform: rotate3d(1, -1, 0, 180deg);
+          transform: rotate3d(1, -1, 0, 180deg);
+}
